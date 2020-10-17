@@ -1,5 +1,6 @@
 backend:
   name: nichsebastian
+  branch: master
 
 media_folder: static/assets
 public_folder: /assets
@@ -7,9 +8,10 @@ public_folder: /assets
 collections:
   - name: "blog"
     label: "Blog"
-    folder: "src/blog-posts"
+    folder: "src/pages/blog"
     create: true
     fields:
-      - { name: "title", label: "Title", widget: "string" }
-      - { name: "date", label: "Date", widget: "datetime" }
-      - { name: "body", label: "Body", widget: "markdown" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }

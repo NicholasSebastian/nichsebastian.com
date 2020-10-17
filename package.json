@@ -1,6 +1,7 @@
 {
   "name": "nichsebastian.com",
   "description": "Nicholas Sebastian's personal website.",
+  "version": "4.0.0",
   "author": "Nicholas Sebastian Hendrata",
   "private": true,
   "scripts": {
@@ -26,5 +27,9 @@
   },
   "devDependencies": {
     "prettier": "2.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NicholasSebastian/nichsebastian.com"
   }
 }
