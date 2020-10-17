@@ -1,8 +1,16 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
+
 import SEO from "../components/seo";
+import TypeEffect from "../components/typeEffect";
+
+import githubIcon from "../images/github.svg";
+import linkedinIcon from "../images/linkedin.svg";
+import instagramIcon from "../images/instagram.svg";
+import profileImage from "../images/profile.png";
 
 const Home = ({ data }) => {
+  const { title } = data.site.siteMetadata;
   const {
     splash,
     about,
@@ -13,10 +21,36 @@ const Home = ({ data }) => {
   return (
     <>
       <SEO title="Home" />
-      <nav id="navbar"></nav>
-      <nav id="sosmed"></nav>
-      <section id="hero">{splash}</section>
-      <section id="about"></section>
+      <nav id="navbar">
+        <div>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+        </div>
+        <div>
+          <Link to="/blog">Blog</Link>
+          <Link to="/contact">Contact</Link>
+        </div>
+      </nav>
+      <section id="hero">
+        <h1>{title}</h1>
+        <TypeEffect text={splash} />
+        <nav>
+          <a><img src={githubIcon} /></a>
+          <a><img src={linkedinIcon} /></a>
+          <a><img src={instagramIcon} /></a>
+        </nav>
+      </section>
+      <section id="about">
+        <div>
+          <img src={profileImage} />
+        </div>
+        <div>
+          <h2>About</h2>
+          <p>{about}</p>
+          <Link to="/resume">Curriculum Vitae</Link>
+        </div>
+      </section>
       <section id="skills"></section>
       <section id="projects"></section>
       <div id="backdrop"></div>
@@ -36,11 +70,7 @@ export const indexQuery = graphql`
       childMarkdownRemark {
         frontmatter {
           splash
-          about {
-            Games
-            Mobile_Apps
-            Websites
-          }
+          about
           skills {
             Conceptual_Knowledge
             Game_Development
@@ -56,6 +86,11 @@ export const indexQuery = graphql`
             link
           }
         }
+      }
+    }
+    site {
+      siteMetadata {
+        title
       }
     }
   }

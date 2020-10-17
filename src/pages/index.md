@@ -1,10 +1,13 @@
 ---
-splash: "An undergraduate computer science student from Jakarta, Indonesia."
+splash: 
+    An undergraduate computer science student from Jakarta, Indonesia.
 
 about:
-    Mobile Apps: "bla bla"
-    Websites: "bla bla"
-    Games: "bla bla"
+    I'm Nicholas, an aspiring software engineer who usually spends
+    time working on personal projects and learning new skills.
+    I'm always eager to experience new things and find new ways to
+    leverage and make the most of my skills. I'm currently a second 
+    year undergraduate student pursuing a computer science degree from the University of Wollongong.
 
 skills:
     Languages:

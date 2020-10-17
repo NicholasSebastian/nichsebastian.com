@@ -2,6 +2,8 @@
   Nicholas Sebastian Hendrata
 </h1>
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/50e0269a-0c67-435e-b3d2-0f516a33062d/deploy-status)](https://app.netlify.com/sites/nichsebastian/deploys)
+
 Soon to be the latest and greatest version of my personal website, made with Gatsby.js.  
 I use this site for whatever really, like posting blogs and showcasing my projects maybe.
 
