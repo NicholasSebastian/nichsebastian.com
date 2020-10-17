@@ -1,0 +1,15 @@
+backend:
+  name: nichsebastian
+
+media_folder: static/assets
+public_folder: /assets
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "src/blog-posts"
+    create: true
+    fields:
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "date", label: "Date", widget: "datetime" }
+      - { name: "body", label: "Body", widget: "markdown" }
