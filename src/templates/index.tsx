@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { graphql, Link } from "gatsby";
 
 import SEO from "../components/seo";
@@ -9,14 +9,26 @@ import linkedinIcon from "../images/linkedin.svg";
 import instagramIcon from "../images/instagram.svg";
 import profileImage from "../images/profile.png";
 
+import shape1 from "../images/square-filled.svg";
+import shape2 from "../images/square-hollow.svg";
+import shape3 from "../images/square-dashed.svg";
+import shape4 from "../images/triangle-filled.svg";
+import shape5 from "../images/triangle-hollow.svg";
+
+function fetchGithub() {
+  const [repositories, setRepositories] = useState([]);
+  useEffect(() => {
+    fetch('/.netlify/functions/github')
+    .then(response => response.json())
+    .then(data => setRepositories(data))
+  }, []);
+  return repositories;
+}
+
 const Home = ({ data }) => {
-  const { title } = data.site.siteMetadata;
-  const {
-    splash,
-    about,
-    skills,
-    projects
-  } = data.file.childMarkdownRemark.frontmatter;
+  const { title, github, linkedin, instagram } = data.site.siteMetadata;
+  const { splash, about, skills, projects } = data.file.childMarkdownRemark.frontmatter;
+  const repositories = fetchGithub();
 
   return (
     <>
@@ -36,9 +48,15 @@ const Home = ({ data }) => {
         <h1>{title}</h1>
         <TypeEffect text={splash} />
         <nav>
-          <a><img src={githubIcon} /></a>
-          <a><img src={linkedinIcon} /></a>
-          <a><img src={instagramIcon} /></a>
+          <a href={`https://github.com/${github}`}>
+            <img src={githubIcon} />
+          </a>
+          <a href={`https://linkedin.com/in/${linkedin}`}>
+            <img src={linkedinIcon} />
+          </a>
+          <a href={`https://www.instagram.com/${instagram}`}>
+            <img src={instagramIcon} />
+          </a>
         </nav>
       </section>
       <section id="about">
@@ -51,9 +69,101 @@ const Home = ({ data }) => {
           <Link to="/resume">Curriculum Vitae</Link>
         </div>
       </section>
-      <section id="skills"></section>
-      <section id="projects"></section>
-      <div id="backdrop"></div>
+      <section id="skills">
+        <h2>Skills</h2>
+        <div>
+          <div>
+            <div><span>Languages</span></div>
+            <ul>{skills.Languages.map(item => {
+              return <li key={item}>{item}</li>
+            })}</ul>
+            <div><span>Web Development</span></div>
+            <ul>{skills.Web_Development.map(item => {
+              return <li key={item}>{item}</li>
+            })}</ul>
+          </div>
+          <div>
+            <div><span>Mobile Development</span></div>
+            <ul>{skills.Mobile_Development.map(item => {
+              return <li key={item}>{item}</li>
+            })}</ul>
+            <div><span>Game Development</span></div>
+            <ul>{skills.Game_Development.map(item => {
+              return <li key={item}>{item}</li>
+            })}</ul>
+            <div><span>Conceptual Knowledge</span></div>
+            <ul>{skills.Conceptual_Knowledge.map(item => {
+              return <li key={item}>{item}</li>
+            })}</ul>
+          </div>
+          <div>
+            <div><span>Others</span></div>
+            <ul>{skills.Others.map(item => {
+              return <li key={item}>{item}</li>
+            })}</ul>
+            <div><span>Tools</span></div>
+            <ul>{skills.Tools.map(item => {
+              return <li key={item}>{item}</li>
+            })}</ul>
+            <div><span>Soft Skills</span></div>
+            <ul>{skills.Soft_Skills.map(item => {
+              return <li key={item}>{item}</li>
+            })}</ul>
+          </div>
+        </div>
+      </section>
+      <section id="projects">
+        <h2>Projects</h2>
+        {projects.map(project => {
+          return (
+            <div key={project.name}>
+              <div>
+                <div><span>{project.name}</span></div>
+                <div>{project.description}</div>
+                {project.link && <a href={project.link}>Open</a>}
+                {project.repository && <a href={project.repository}>GitHub</a>}
+              </div>
+              <div>
+                <img src={`/assets/${project.image}`} />
+              </div>
+            </div>
+          );
+        })}
+        <div><h3>Repositories</h3></div>
+        <table cellSpacing='0'>
+          <thead>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Language</th>
+            <th>Created</th>
+          </thead>
+          <tbody>{
+            repositories.length > 0 ? 
+              repositories.map(repo => {
+                return (
+                  <tr key={repo.name} onClick={() => window.location = repo.url}>
+                    <td>{repo.name}</td>
+                    <td>{repo.description}</td>
+                    <td>{repo.primaryLanguage}</td>
+                    <td>{repo.createdAt}</td>
+                  </tr>
+                );
+              }) : 
+              <div>Loading...</div>
+          }</tbody>
+        </table>
+      </section>
+      <footer>
+        © Nicholas Sebastian Hendrata 2020<br/>
+        Website by Nicholas Sebastian, All rights reserved.
+      </footer>
+      <div id="backdrop">
+        <img src={shape1} />
+        <img src={shape2} />
+        <img src={shape5} />
+        <img src={shape3} />
+        <img src={shape4} />
+      </div>
     </>
   );
 }
@@ -72,18 +182,21 @@ export const indexQuery = graphql`
           splash
           about
           skills {
-            Conceptual_Knowledge
-            Game_Development
             Languages
-            Mobile_Development
-            Others
-            Soft_Skills
-            Tools
             Web_Development
+            Mobile_Development
+            Game_Development
+            Others
+            Tools
+            Conceptual_Knowledge
+            Soft_Skills
           }
           projects {
             name
+            description
             link
+            repository
+            image
           }
         }
       }
@@ -91,6 +204,9 @@ export const indexQuery = graphql`
     site {
       siteMetadata {
         title
+        github
+        linkedin
+        instagram
       }
     }
   }

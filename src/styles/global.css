@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;700&display=swap');
 
 :root {
+    scroll-behavior: smooth;
+    font-size: 16px;
     --width: 65rem;
     --image-size: 20rem;
 }
@@ -15,11 +17,20 @@ body {
     background-color: #000;
     margin: 0;
     padding: 0;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 section {
     max-width: var(--width);
     margin: 0 auto;
+}
+
+footer {
+    margin-top: 12rem;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+    font-size: 0.9rem;
 }
 
 h1, h2 {
@@ -34,7 +45,7 @@ h1 {
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: 3.2rem;
 }
 
 p {
@@ -54,7 +65,7 @@ p {
 
 #navbar a {
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 700;
     transition: 0.2s;
 }
 
@@ -91,6 +102,7 @@ p {
 #hero > div:first-of-type {
     font-size: 1.4rem;
     font-weight: 400;
+    letter-spacing: 0.07rem;
 }
 
 #hero > nav {
@@ -147,17 +159,17 @@ p {
 }
 
 #about > div:first-child::after {
-    content: 'the only photo of myself I can find';
+    content: 'the only clear photo of myself I can find';
     font-size: 0.8rem;
     position: absolute;
-    bottom: -2.2rem;
+    bottom: -1.5rem;
     left: 2rem;
 }
 
 #about > div:last-child > a {
     display: inline-block;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 700;
     border: 1px solid #fff;
     border-radius: 0.2rem;
     padding: 1rem 2rem;
@@ -170,6 +182,270 @@ p {
     color: #000;
 }
 
+#skills {
+    margin-top: 20rem;
+}
+
+#skills > h2 {
+    margin-bottom: 3rem;
+}
+
+#skills > div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#skills > div > div {
+    width: 20rem;
+}
+
+#skills > div > div > div {
+    position: relative;
+}
+
+#skills > div > div > div > span {
+    font-size: 1.2rem;
+    font-weight: 700;
+    background-color: #000;
+    padding-right: 1rem;
+}
+
+#skills > div > div > div::after {
+    content: '';
+    background-color: #fff;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 0.65rem;
+    right: 0;
+    z-index: -1;
+}
+
+#skills > div > div > ul {
+    line-height: 1.7rem;
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+    letter-spacing: 0.07rem;
+}
+
 #projects {
-    margin-bottom: 10rem;
+    margin-top: 15rem;
+}
+
+#projects > h2 {
+    text-align: center;
+    font-size: 3.7rem;
+    margin-bottom: 3.5rem;
+}
+
+#projects > div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6rem;
+}
+
+#projects > div > div:first-child {
+    width: 25rem;
+}
+
+#projects > div > div:first-child > div:nth-child(1) {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+#projects > div > div:first-child > div:nth-child(1) > span {
+    font-size: 1.4rem;
+    font-weight: 700;
+    background-color: #000;
+    padding-right: 1rem;
+}
+
+#projects > div > div:first-child > div:nth-child(1)::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    top: 0.8rem;
+    right: 0;
+    z-index: -1;
+}
+
+#projects > div > div:first-child > div:nth-child(2) {
+    letter-spacing: 0.07rem;
+}
+
+#projects > div > div:first-child > a {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 700;
+    border: 1px solid #fff;
+    border-radius: 0.2rem;
+    padding: 1rem 0;
+    width: 7rem;
+    text-align: center;
+    margin-top: 3rem;
+    margin-right: 1rem;
+    transition: 0.2s;
+}
+
+#projects > div > div:first-child > a:hover {
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
+}
+
+#projects > div > div:last-child {
+    width: 36rem;
+    position: relative;
+}
+
+#projects > div > div:last-child > img {
+    width: 100%;
+    border: 1px solid #fff;
+    transform: translateX(-1.5rem);
+}
+
+#projects > div > div:last-child::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border: 2px dashed #fff;
+    position: absolute;
+    top: 1.2rem;
+    z-index: -1;
+}
+
+#projects > div:last-of-type {
+    margin-top: 10rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+#projects > div > h3 {
+    font-size: 2rem;
+    background-color: #000;
+    padding-right: 1.5rem;
+}
+
+#projects > div:last-of-type::after {
+    content: '';
+    background-color: #fff;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    top: 3.2rem;
+    z-index: -1;
+}
+
+#projects > table > thead > th {
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+    color: #aaa;
+}
+
+#projects > table > thead > th:first-child {
+    padding-left: 1.5rem;
+}
+
+#projects > table > thead > th:last-child {
+    padding-right: 1.5rem;
+}
+
+#projects > table > thead > th:nth-child(-n+2) {
+    text-align: left;
+}
+
+#projects > table > thead > th:nth-last-child(-n+2) {
+    text-align: right;
+}
+
+#projects > table > tbody > tr > td {
+    padding: 0.4rem 0;
+}
+
+#projects > table > tbody > tr > td:nth-child(1) {
+    padding-left: 1.5rem;
+    padding-right: 2.5rem;
+}
+
+#projects > table > tbody > tr > td:nth-child(3) {
+    padding-left: 2.5rem;
+}
+
+#projects > table > tbody > tr > td:nth-child(4) {
+    padding-right: 1.5rem;
+    padding-left: 2.5rem;
+}
+
+#projects > table > tbody > tr:hover {
+    cursor: pointer;
+    background-color: #fff;
+}
+
+#projects > table > tbody > tr:hover > td {
+    color: #000;
+}
+
+#projects > table > tbody > tr:hover > td:first-child {
+    border-top-left-radius: 0.4rem;
+    border-bottom-left-radius: 0.4rem;
+}
+
+#projects > table > tbody > tr:hover > td:last-child {
+    border-top-right-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;
+}
+
+#backdrop > img {
+    filter: invert();
+    position: absolute;
+}
+
+#backdrop > img:nth-child(1) {
+    animation: spin 12s linear infinite;
+    top: 10rem;
+    left: 1rem;
+    width: 15rem;
+}
+
+#backdrop > img:nth-child(2) {
+    animation: reverse-spin 12s linear infinite;
+    top: 25rem;
+    right: 1rem;
+    width: 20rem;
+}
+
+#backdrop > img:nth-child(3) {
+    animation: reverse-spin 12s linear infinite;
+    top: 77rem;
+    right: 30rem;
+    width: 15rem;
+}
+
+#backdrop > img:nth-child(4) {
+    animation: spin 12s linear infinite;
+    top: 135rem;
+    left: 5rem;
+    width: 15rem;
+}
+
+#backdrop > img:nth-child(5) {
+    animation: reverse-spin 12s linear infinite;
+    top: 155rem;
+    right: 5rem;
+    width: 12rem;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes reverse-spin {
+    100% {
+        transform: rotate(-360deg);
+    }
 }

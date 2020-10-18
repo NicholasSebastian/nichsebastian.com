@@ -11,7 +11,7 @@ about:
 
 skills:
     Languages:
-        - JavaScript
+        - JavaScript ES6+
         - C#
         - Java
         - Python
@@ -20,6 +20,7 @@ skills:
         - TypeScript
         - HTML
         - CSS
+        - jQuery
         - React
         - Node.js
         - Express
@@ -49,7 +50,6 @@ skills:
         - Adobe XD / Figma
         - Google Suite / MS Office
         - Blender
-        - ZBrush
     Conceptual Knowledge:
         - Object-Oriented Programming
         - Profiling
@@ -61,17 +61,19 @@ skills:
         - Self-learner / Love to learn
         - Team player
 
-projects:
-    - { 
-        name: Example 1, 
-        link: lalala 
+projects: [
+    {
+        name: Pokédex,
+        description: lalalala,
+        link: https://pokedexter.netlify.app/,
+        repository: https://github.com/NicholasSebastian/Pokedex,
+        image: pokedex.png
+    },
+    {
+        name: Shogi,
+        description: lalalala,
+        repository: https://github.com/NicholasSebastian/Shogi-Game,
+        image: shogi.png
     }
-    - { 
-        name: Example 2, 
-        link: lalala 
-    }
-    - { 
-        name: Example 3, 
-        link: lalala 
-    }
+]
 ---

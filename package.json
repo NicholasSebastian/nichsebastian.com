@@ -3,12 +3,13 @@
   "description": "Nicholas Sebastian's personal website.",
   "version": "4.0.0",
   "author": "Nicholas Sebastian Hendrata",
+  "homepage": "https://nichsebastian.com",
   "private": true,
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
+    "start": "netlify dev",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
@@ -20,12 +21,15 @@
     "gatsby-plugin-typescript": "^2.4.22",
     "gatsby-source-filesystem": "^2.3.35",
     "gatsby-transformer-remark": "^2.8.42",
+    "isomorphic-fetch": "^3.0.0",
     "netlify-cms-app": "^2.12.27",
+    "netlify-lambda": "^2.0.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
+    "@types/isomorphic-fetch": "0.0.35",
     "prettier": "2.1.2"
   },
   "repository": {
