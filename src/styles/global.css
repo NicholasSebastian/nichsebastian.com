@@ -398,6 +398,10 @@ p {
     border-bottom-right-radius: 0.4rem;
 }
 
+#projects > span:last-child {
+    letter-spacing: 0.05rem;
+}
+
 #backdrop > img {
     filter: invert();
     position: absolute;

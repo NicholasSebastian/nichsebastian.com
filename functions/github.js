@@ -53,7 +53,7 @@ async function getRepos() {
         return {
             name,
             description,
-            createdAt,
+            createdAt: createdAt.subtr(0, 10),
             primaryLanguage: primaryLanguage && primaryLanguage.name,
             url
         };

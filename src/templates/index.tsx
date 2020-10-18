@@ -25,6 +25,16 @@ function fetchGithub() {
   return repositories;
 }
 
+// TODO: Optimize project images with Gatsby Images.
+// TODO: Bottom-right Nav.
+// TODO: Resume Template.
+// TODO: Contact Page.
+// TODO: Blog List Page.
+// TODO: Blog Post Template.
+// TODO: Fix Netlify CMS integration.
+// TODO: Add site manifest with Gatsby Plugin Manifest.
+// TODO: 404 Page.
+
 const Home = ({ data }) => {
   const { title, github, linkedin, instagram } = data.site.siteMetadata;
   const { splash, about, skills, projects } = data.file.childMarkdownRemark.frontmatter;
@@ -130,15 +140,15 @@ const Home = ({ data }) => {
           );
         })}
         <div><h3>Repositories</h3></div>
-        <table cellSpacing='0'>
-          <thead>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Language</th>
-            <th>Created</th>
-          </thead>
-          <tbody>{
-            repositories.length > 0 ? 
+        {repositories.length > 0 ? 
+            <table cellSpacing='0'>
+            <thead>
+              <th>Title</th>
+              <th>Description</th>
+              <th>Language</th>
+              <th>Created</th>
+            </thead>
+            <tbody>{
               repositories.map(repo => {
                 return (
                   <tr key={repo.name} onClick={() => window.location = repo.url}>
@@ -148,10 +158,13 @@ const Home = ({ data }) => {
                     <td>{repo.createdAt}</td>
                   </tr>
                 );
-              }) : 
-              <div>Loading...</div>
-          }</tbody>
-        </table>
+              })
+            }</tbody>
+          </table> : 
+          <span>
+            Fetching data from GitHub, This may take a while...
+          </span>
+        }
       </section>
       <footer>
         © Nicholas Sebastian Hendrata 2020<br/>
