@@ -1,23 +1,23 @@
 require('isomorphic-fetch');
 
 const url = 'https://api.github.com/graphql';
-const token = '9c4f0d12921be22803b011d7a7ee9043be8b0f59';
+const token = '8e805f437119bbb2a227d673fe1d9c139d6c90d4';
 const query = `
     query { 
         user(login: "NicholasSebastian") {
-        repositories(last: 100, orderBy: {field: CREATED_AT, direction: DESC}) {
-            edges {
-            node {
-                name
-                description
-                createdAt
-                primaryLanguage {
-                name
+            repositories(last: 100, orderBy: {field: CREATED_AT, direction: DESC}) {
+                edges {
+                    node {
+                        name
+                        description
+                        createdAt
+                        primaryLanguage {
+                            name
+                        }
+                        url
+                    }
                 }
-                url
-            }
-            }
-        } 
+            } 
         }
     }`;
 
@@ -38,7 +38,8 @@ async function getRepos() {
             'Authorization': `Bearer ${token}` 
         },
         body: JSON.stringify({ query })
-    }).then(res => res.json());
+    })
+    .then(res => res.json());
 
     const { edges } = data.data.user.repositories;
     const repos = edges.map(edge => {

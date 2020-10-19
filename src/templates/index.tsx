@@ -15,6 +15,18 @@ import shape3 from "../images/square-dashed.svg";
 import shape4 from "../images/triangle-filled.svg";
 import shape5 from "../images/triangle-hollow.svg";
 
+// TODO: Show tech stack under project descriptions.
+// TODO: Optimize project images with Gatsby Images
+// TODO: Bottom-right Nav.
+// TODO: Add Fade-in effect / Lazy Loading.
+// TODO: Resume Template.
+// TODO: Contact Page.
+// TODO: Blog List Page.
+// TODO: Blog Post Template.
+// TODO: Fix Netlify CMS integration.
+// TODO: Add site manifest with Gatsby Plugin Manifest.
+// TODO: 404 Page.
+
 function fetchGithub() {
   const [repositories, setRepositories] = useState([]);
   useEffect(() => {
@@ -24,16 +36,6 @@ function fetchGithub() {
   }, []);
   return repositories;
 }
-
-// TODO: Optimize project images with Gatsby Images.
-// TODO: Bottom-right Nav.
-// TODO: Resume Template.
-// TODO: Contact Page.
-// TODO: Blog List Page.
-// TODO: Blog Post Template.
-// TODO: Fix Netlify CMS integration.
-// TODO: Add site manifest with Gatsby Plugin Manifest.
-// TODO: 404 Page.
 
 const Home = ({ data }) => {
   const { title, github, linkedin, instagram } = data.site.siteMetadata;

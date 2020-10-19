@@ -64,14 +64,16 @@ skills:
 projects: [
     {
         name: Pokédex,
-        description: lalalala,
+        description: "A recreation of the Pokédex, the fictional digital encyclopaedia for Pokémon, made to look like the one in the Pokemon anime.",
+        tech: ["Javascript", "React.js"],
         link: https://pokedexter.netlify.app/,
         repository: https://github.com/NicholasSebastian/Pokedex,
         image: pokedex.png
     },
     {
         name: Shogi,
-        description: lalalala,
+        description: "The Japanese Shogi board game remade for the Desktop.",
+        tech: ["C#", "Unity Engine"],
         repository: https://github.com/NicholasSebastian/Shogi-Game,
         image: shogi.png
     }
