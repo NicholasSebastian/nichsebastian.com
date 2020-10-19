@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { graphql, Link } from "gatsby";
+import Img from "gatsby-image";
 
 import SEO from "../components/seo";
 import TypeEffect from "../components/typeEffect";
@@ -14,9 +15,6 @@ import shape3 from "../images/square-dashed.svg";
 import shape4 from "../images/triangle-filled.svg";
 import shape5 from "../images/triangle-hollow.svg";
 
-import profileImage from "../images/profile.png";
-
-// TODO: Optimize project images with Gatsby Images
 // TODO: Bottom-right Nav.
 // TODO: Add Fade-in effect / Lazy Loading.
 // TODO: Resume Template.
@@ -38,9 +36,17 @@ function fetchGithub() {
 }
 
 const Home = ({ data }) => {
+  const repositories = fetchGithub();
+  
   const { title, github, linkedin, instagram } = data.site.siteMetadata;
   const { splash, about, skills, projects } = data.file.childMarkdownRemark.frontmatter;
-  const repositories = fetchGithub();
+  
+  const profileImage = data.profileImage.childImageSharp.fixed;
+
+  const projectImages = {};
+  data.projectImages.edges.forEach(edge => {
+    projectImages[edge.node.base] = edge.node.childImageSharp.fixed;
+  })
 
   return (
     <>
@@ -73,7 +79,7 @@ const Home = ({ data }) => {
       </section>
       <section id="about">
         <div>
-          <img src={profileImage} />
+          <Img fixed={profileImage} />
         </div>
         <div>
           <h2>About</h2>
@@ -141,7 +147,7 @@ const Home = ({ data }) => {
                 </div>
               </div>
               <div>
-                <img src={`/assets/${project.image}`} />
+                <Img fixed={projectImages[project.image]} />
               </div>
             </div>
           );
@@ -194,11 +200,15 @@ export default Home;
 
 export const indexQuery = graphql`
   query {
-    file (
-      name: {
-        eq: "index"
+    site {
+      siteMetadata {
+        title
+        github
+        linkedin
+        instagram
       }
-    ) {
+    }
+    file(relativePath: { eq: "index.md" }) {
       childMarkdownRemark {
         frontmatter {
           splash
@@ -224,13 +234,30 @@ export const indexQuery = graphql`
         }
       }
     }
-    site {
-      siteMetadata {
-        title
-        github
-        linkedin
-        instagram
+    profileImage: 
+      file(relativePath: {eq: "profile.png"}) {
+        childImageSharp {
+          fixed(width: 320) {
+            ...GatsbyImageSharpFixed
+          }
+        }
       }
-    }
+    projectImages:
+      allFile(filter: {
+        sourceInstanceName: {eq: "images"},
+        extension: {eq: "png"},
+        relativeDirectory: {eq: "projects"}
+      }) {
+        edges {
+          node {
+            base
+            childImageSharp {
+              fixed(width: 576) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
+        }
+      }
   }
 `

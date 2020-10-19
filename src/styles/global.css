@@ -6,6 +6,7 @@
     font-size: 16px;
     --width: 65rem;
     --image-size: 20rem;
+    --project-image-size: 36rem;
 }
 
 * {
@@ -27,7 +28,7 @@ section {
 }
 
 footer {
-    margin-top: 12rem;
+    margin-top: 10rem;
     margin-bottom: 2rem;
     padding-left: 2rem;
     font-size: 0.9rem;
@@ -137,8 +138,9 @@ p {
     display: flex;
 }
 
-#about > div:first-child > img {
+#about > div:first-child > div {
     max-width: var(--image-size);
+    max-height: var(--image-size);
     border: 1px solid #fff;
 }
 
@@ -242,7 +244,7 @@ p {
 #projects > div {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 6rem;
+    margin-bottom: 5rem;
 }
 
 #projects > div > div:first-child {
@@ -319,12 +321,12 @@ p {
 }
 
 #projects > div > div:last-child {
-    width: 36rem;
+    width: var(--project-image-size);
     position: relative;
 }
 
-#projects > div > div:last-child > img {
-    width: 100%;
+#projects > div > div:last-child > div {
+    max-width: 100%;
     border: 1px solid #fff;
     transform: translateX(-1.5rem);
 }
@@ -340,24 +342,24 @@ p {
 }
 
 #projects > div:last-of-type {
-    margin-top: 10rem;
+    margin-top: 6rem;
     margin-bottom: 1rem;
     position: relative;
 }
 
 #projects > div > h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     background-color: #000;
-    padding-right: 1.5rem;
+    padding-right: 1.1rem;
 }
 
 #projects > div:last-of-type::after {
     content: '';
     background-color: #fff;
     width: 100%;
-    height: 2px;
+    height: 1px;
     position: absolute;
-    top: 3.2rem;
+    top: 2.9rem;
     z-index: -1;
 }
 

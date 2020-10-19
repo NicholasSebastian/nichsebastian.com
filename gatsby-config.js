@@ -9,9 +9,10 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-typescript`,
-    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -19,6 +20,14 @@ module.exports = {
         path: `${__dirname}/src/pages`
       }
     },
-    `gatsby-transformer-remark`
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/static/assets`
+      }
+    },
+    `gatsby-transformer-remark`,
+    `gatsby-transformer-sharp`
   ],
 }

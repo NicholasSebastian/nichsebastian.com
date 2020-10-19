@@ -7,6 +7,7 @@ exports.createPages = async ({ graphql, actions }) => {
         {
             allFile (
                 filter: {
+                    sourceInstanceName: {eq: "pages"},
                     extension: {eq: "md"}
                 }
             ) {
