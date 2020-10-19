@@ -1,7 +1,7 @@
 require('isomorphic-fetch');
 
 const url = 'https://api.github.com/graphql';
-const token = '8e805f437119bbb2a227d673fe1d9c139d6c90d4';
+const token = process.env.GITHUB_KEY;
 const query = `
     query { 
         user(login: "NicholasSebastian") {
@@ -54,7 +54,7 @@ async function getRepos() {
         return {
             name,
             description,
-            createdAt: createdAt.subtr(0, 10),
+            createdAt: createdAt.substr(0, 10),
             primaryLanguage: primaryLanguage && primaryLanguage.name,
             url
         };

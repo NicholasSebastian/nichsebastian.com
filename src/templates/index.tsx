@@ -7,7 +7,6 @@ import TypeEffect from "../components/typeEffect";
 import githubIcon from "../images/github.svg";
 import linkedinIcon from "../images/linkedin.svg";
 import instagramIcon from "../images/instagram.svg";
-import profileImage from "../images/profile.png";
 
 import shape1 from "../images/square-filled.svg";
 import shape2 from "../images/square-hollow.svg";
@@ -15,7 +14,8 @@ import shape3 from "../images/square-dashed.svg";
 import shape4 from "../images/triangle-filled.svg";
 import shape5 from "../images/triangle-hollow.svg";
 
-// TODO: Show tech stack under project descriptions.
+import profileImage from "../images/profile.png";
+
 // TODO: Optimize project images with Gatsby Images
 // TODO: Bottom-right Nav.
 // TODO: Add Fade-in effect / Lazy Loading.
@@ -131,9 +131,14 @@ const Home = ({ data }) => {
             <div key={project.name}>
               <div>
                 <div><span>{project.name}</span></div>
-                <div>{project.description}</div>
-                {project.link && <a href={project.link}>Open</a>}
-                {project.repository && <a href={project.repository}>GitHub</a>}
+                <div>
+                  <div>{project.description}</div>
+                  <div>{project.tech.map(tag => {
+                    return <div key={tag}>{tag}</div>
+                  })}</div>
+                  {project.link && <a href={project.link}>Open</a>}
+                  {project.repository && <a href={project.repository}>GitHub</a>}
+                </div>
               </div>
               <div>
                 <img src={`/assets/${project.image}`} />
@@ -145,10 +150,12 @@ const Home = ({ data }) => {
         {repositories.length > 0 ? 
             <table cellSpacing='0'>
             <thead>
-              <th>Title</th>
-              <th>Description</th>
-              <th>Language</th>
-              <th>Created</th>
+              <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Language</th>
+                <th>Created</th>
+              </tr>
             </thead>
             <tbody>{
               repositories.map(repo => {
@@ -209,6 +216,7 @@ export const indexQuery = graphql`
           projects {
             name
             description
+            tech
             link
             repository
             image

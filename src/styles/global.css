@@ -249,19 +249,19 @@ p {
     width: 25rem;
 }
 
-#projects > div > div:first-child > div:nth-child(1) {
+#projects > div > div:first-child > div:first-child {
     margin-bottom: 1.5rem;
     position: relative;
 }
 
-#projects > div > div:first-child > div:nth-child(1) > span {
+#projects > div > div:first-child > div:first-child > span {
     font-size: 1.4rem;
     font-weight: 700;
     background-color: #000;
     padding-right: 1rem;
 }
 
-#projects > div > div:first-child > div:nth-child(1)::after {
+#projects > div > div:first-child > div:first-child::after {
     content: '';
     width: 100%;
     height: 1px;
@@ -272,11 +272,34 @@ p {
     z-index: -1;
 }
 
-#projects > div > div:first-child > div:nth-child(2) {
-    letter-spacing: 0.07rem;
+#projects > div > div:first-child > div:last-child {
+    width: inherit;
+    position: absolute;
+    z-index: 1;
 }
 
-#projects > div > div:first-child > a {
+#projects > div > div:first-child > div:last-child > div:nth-child(1) {
+    background-color: #000;
+    border: 1px solid #fff;
+    letter-spacing: 0.07rem;
+    width: 30rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+#projects > div > div:first-child > div:last-child > div:nth-child(2) {
+    margin-bottom: 1.5rem;
+    width: inherit;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#projects > div > div:first-child > div:last-child > div:nth-child(2) > div {
+    margin-right: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#projects > div > div:first-child > div:last-child > a {
     display: inline-block;
     text-decoration: none;
     font-weight: 700;
@@ -285,12 +308,11 @@ p {
     padding: 1rem 0;
     width: 7rem;
     text-align: center;
-    margin-top: 3rem;
     margin-right: 1rem;
     transition: 0.2s;
 }
 
-#projects > div > div:first-child > a:hover {
+#projects > div > div:first-child > div:last-child > a:hover {
     cursor: pointer;
     background-color: #fff;
     color: #000;
@@ -339,35 +361,37 @@ p {
     z-index: -1;
 }
 
-#projects > table > thead > th {
+#projects > table > thead > tr > th {
     font-size: 1.2rem;
     padding-bottom: 1rem;
     color: #aaa;
 }
 
-#projects > table > thead > th:first-child {
+#projects > table > thead > tr > th:first-child {
     padding-left: 1.5rem;
 }
 
-#projects > table > thead > th:last-child {
+#projects > table > thead > tr > th:last-child {
     padding-right: 1.5rem;
 }
 
-#projects > table > thead > th:nth-child(-n+2) {
+#projects > table > thead > tr > th:nth-child(-n+2) {
     text-align: left;
 }
 
-#projects > table > thead > th:nth-last-child(-n+2) {
+#projects > table > thead > tr > th:nth-last-child(-n+2) {
     text-align: right;
 }
 
 #projects > table > tbody > tr > td {
-    padding: 0.4rem 0;
+    padding: 0.8rem 0;
 }
 
 #projects > table > tbody > tr > td:nth-child(1) {
     padding-left: 1.5rem;
     padding-right: 2.5rem;
+    border-top-left-radius: 0.4rem;
+    border-bottom-left-radius: 0.4rem;
 }
 
 #projects > table > tbody > tr > td:nth-child(3) {
@@ -377,6 +401,13 @@ p {
 #projects > table > tbody > tr > td:nth-child(4) {
     padding-right: 1.5rem;
     padding-left: 2.5rem;
+    border-top-right-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;
+    white-space: nowrap;
+}
+
+#projects > table > tbody > tr {
+    transition: 0.2s;
 }
 
 #projects > table > tbody > tr:hover {
@@ -386,16 +417,6 @@ p {
 
 #projects > table > tbody > tr:hover > td {
     color: #000;
-}
-
-#projects > table > tbody > tr:hover > td:first-child {
-    border-top-left-radius: 0.4rem;
-    border-bottom-left-radius: 0.4rem;
-}
-
-#projects > table > tbody > tr:hover > td:last-child {
-    border-top-right-radius: 0.4rem;
-    border-bottom-right-radius: 0.4rem;
 }
 
 #projects > span:last-child {
