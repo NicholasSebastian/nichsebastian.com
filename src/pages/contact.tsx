@@ -3,13 +3,18 @@ import { Link } from "gatsby";
 import SEO from "../components/seo";
 
 const Contact = () => {
-
   return (
     <>
       <SEO title="Contact" />
       <section id="contact">
         <h2>Contact Me</h2>
-        <form name="Contact" method="POST" data-netlify="true">
+        <form 
+          name="Contact" 
+          method="POST" 
+          data-netlify="true">
+          <input 
+            type="hidden" 
+            name="Contact" />
           <label>
             Name
             <input 
