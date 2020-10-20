@@ -663,3 +663,63 @@ p {
     font-size: 1.2rem;
     margin-top: 1.2rem;
 }
+
+#contact {
+    max-width: 45rem;
+}
+
+#contact > h2 {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+#contact > form > label {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 2rem;
+}
+
+#contact > form input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    color: #000;
+    font-size: 1.05rem;
+}
+
+#contact > form textarea {
+    resize: none;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    color: #000;
+    font-size: 1.05rem;
+}
+
+#contact > form > div:last-child {
+    display: flex;
+    justify-content: space-between;
+}
+
+#contact > form > div:last-child button {
+    background-color: #000;
+    border: 1px solid #fff;
+    border-radius: 0.3rem;
+    padding: 0.8rem 0;
+    width: 5.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+#contact > form > div:last-child button:hover {
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
+}
+
+#contact > form > div:last-child button:focus {
+    outline: none;
+}

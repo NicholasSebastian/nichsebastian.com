@@ -66,7 +66,7 @@ const Home = ({ data }) => {
           <Link to="/contact">Contact</Link>
         </div>
       </nav>
-      <nav id="backToTop"><a href="#navbar">Back to Top</a></nav>
+      <nav id="backToTop"><a href="#">Back to Top</a></nav>
       <section id="hero">
         <h1>{title}</h1>
         <TypeEffect text={splash} />
