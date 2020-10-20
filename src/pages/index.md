@@ -65,7 +65,7 @@ projects: [
     {
         name: Pokédex,
         description: "A recreation of the Pokédex, the fictional digital encyclopaedia for Pokémon, made to look like the one in the Pokemon anime.",
-        tech: ["Javascript", "React.js"],
+        tags: ["Javascript", "React.js", "Pokémon Web API"],
         link: https://pokedexter.netlify.app/,
         repository: https://github.com/NicholasSebastian/Pokedex,
         image: pokedex.png
@@ -73,7 +73,7 @@ projects: [
     {
         name: Shogi,
         description: "The Japanese Shogi board game remade for the Desktop.",
-        tech: ["C#", "Unity Engine"],
+        tags: ["C#", "Unity Engine", "Blender"],
         repository: https://github.com/NicholasSebastian/Shogi-Game,
         image: shogi.png
     }

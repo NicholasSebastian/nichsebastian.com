@@ -341,19 +341,15 @@ p {
     z-index: -1;
 }
 
-#projects > div:last-of-type {
+#projects > section > div:first-child {
     margin-top: 6rem;
     margin-bottom: 1rem;
     position: relative;
+    display: flex;
+    justify-content: space-between;
 }
 
-#projects > div > h3 {
-    font-size: 1.8rem;
-    background-color: #000;
-    padding-right: 1.1rem;
-}
-
-#projects > div:last-of-type::after {
+#projects > section > div:first-child::after {
     content: '';
     background-color: #fff;
     width: 100%;
@@ -363,65 +359,144 @@ p {
     z-index: -1;
 }
 
-#projects > table > thead > tr > th {
+#projects > section > div:first-child > h3 {
+    font-size: 1.8rem;
+    background-color: #000;
+    padding-right: 1.1rem;
+}
+
+#projects > section > div:first-child > div {
+    width: 7rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#projects > section > div:first-child > div > button {
+    background-color: #000;
+    border: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding-top: 5px;
+    border-radius: 0.3rem;
+}
+
+#projects > section > div:first-child > div > button:hover {
+    cursor: pointer;
+}
+
+#projects > section > div:first-child > div > button:focus {
+    outline: none;
+}
+
+#projects > section > div:first-child > div > button > img {
+    filter: invert();
+}
+
+#projects > section > div:last-child {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.25rem;
+}
+
+#projects > section > div:last-child > div {
+    border: 1px solid #fff;
+    border-radius: 0.3rem;
+    height: 12rem;
+    padding: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.2s;
+}
+
+#projects > section > div:last-child > div:hover {
+    cursor: pointer;
+    background-color: #fff;
+}
+
+#projects > section > div:last-child > div:hover > div > img {
+    filter: invert();
+}
+
+#projects > section > div:last-child > div:hover > div > div {
+    color: #000;
+}
+
+#projects > section > div:last-child > div > div:first-child > div:first-of-type {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+}
+
+#projects > section > div:last-child > div > div:last-child {
+    display: flex;
+    justify-content: space-between;
+}
+
+#projects > section > table > thead > tr > th {
     font-size: 1.2rem;
     padding-bottom: 1rem;
     color: #aaa;
 }
 
-#projects > table > thead > tr > th:first-child {
+#projects > section > table > thead > tr > th:first-child {
     padding-left: 1.5rem;
 }
 
-#projects > table > thead > tr > th:last-child {
+#projects > section > table > thead > tr > th:last-child {
     padding-right: 1.5rem;
 }
 
-#projects > table > thead > tr > th:nth-child(-n+2) {
+#projects > section > table > thead > tr > th:nth-child(-n+3) {
     text-align: left;
 }
 
-#projects > table > thead > tr > th:nth-last-child(-n+2) {
+#projects > section > table > thead > tr > th:nth-last-child(1) {
     text-align: right;
 }
 
-#projects > table > tbody > tr > td {
+#projects > section > table > thead > tr > th:nth-child(3) {
+    padding-left: 2.5rem;
+}
+
+#projects > section > table > tbody > tr > td {
     padding: 0.8rem 0;
 }
 
-#projects > table > tbody > tr > td:nth-child(1) {
+#projects > section > table > tbody > tr > td:nth-child(1) {
     padding-left: 1.5rem;
     padding-right: 2.5rem;
     border-top-left-radius: 0.4rem;
     border-bottom-left-radius: 0.4rem;
 }
 
-#projects > table > tbody > tr > td:nth-child(3) {
+#projects > section > table > tbody > tr > td:nth-child(3) {
     padding-left: 2.5rem;
 }
 
-#projects > table > tbody > tr > td:nth-child(4) {
+#projects > section > table > tbody > tr > td:nth-child(4) {
     padding-right: 1.5rem;
-    padding-left: 2.5rem;
+    padding-left: 2rem;
     border-top-right-radius: 0.4rem;
     border-bottom-right-radius: 0.4rem;
     white-space: nowrap;
 }
 
-#projects > table > tbody > tr {
+#projects > section > table > tbody > tr {
     transition: 0.2s;
 }
 
-#projects > table > tbody > tr:hover {
+#projects > section > table > tbody > tr:hover {
     cursor: pointer;
     background-color: #fff;
 }
 
-#projects > table > tbody > tr:hover > td {
+#projects > section > table > tbody > tr:hover > td {
     color: #000;
 }
 
-#projects > span:last-child {
+#projects > section > span:last-child {
     letter-spacing: 0.05rem;
 }
 

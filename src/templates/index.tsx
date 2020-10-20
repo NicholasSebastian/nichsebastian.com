@@ -9,6 +9,9 @@ import githubIcon from "../images/github.svg";
 import linkedinIcon from "../images/linkedin.svg";
 import instagramIcon from "../images/instagram.svg";
 
+import tileIcon from "../images/tile.svg";
+import listIcon from "../images/list.svg";
+
 import shape1 from "../images/square-filled.svg";
 import shape2 from "../images/square-hollow.svg";
 import shape3 from "../images/square-dashed.svg";
@@ -37,6 +40,7 @@ function fetchGithub() {
 
 const Home = ({ data }) => {
   const repositories = fetchGithub();
+  const [repoView, setRepoView] = useState<boolean>(true);
   
   const { title, github, linkedin, instagram } = data.site.siteMetadata;
   const { splash, about, skills, projects } = data.file.childMarkdownRemark.frontmatter;
@@ -72,7 +76,7 @@ const Home = ({ data }) => {
           <a href={`https://linkedin.com/in/${linkedin}`}>
             <img src={linkedinIcon} />
           </a>
-          <a href={`https://www.instagram.com/${instagram}`}>
+          <a href={`https://instagram.com/${instagram}`}>
             <img src={instagramIcon} />
           </a>
         </nav>
@@ -139,7 +143,7 @@ const Home = ({ data }) => {
                 <div><span>{project.name}</span></div>
                 <div>
                   <div>{project.description}</div>
-                  <div>{project.tech.map(tag => {
+                  <div>{project.tags.map(tag => {
                     return <div key={tag}>{tag}</div>
                   })}</div>
                   {project.link && <a href={project.link}>Open</a>}
@@ -152,38 +156,74 @@ const Home = ({ data }) => {
             </div>
           );
         })}
-        <div><h3>Repositories</h3></div>
-        {repositories.length > 0 ? 
-            <table cellSpacing='0'>
-            <thead>
-              <tr>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Language</th>
-                <th>Created</th>
-              </tr>
-            </thead>
-            <tbody>{
-              repositories.map(repo => {
-                return (
-                  <tr key={repo.name} onClick={() => window.location = repo.url}>
-                    <td>{repo.name}</td>
-                    <td>{repo.description}</td>
-                    <td>{repo.primaryLanguage}</td>
-                    <td>{repo.createdAt}</td>
+        <section>
+          <div>
+            <h3>Repositories</h3>
+            <div>
+              <button 
+                onClick={() => setRepoView(true)} 
+                style={{ border: repoView ? '1px solid #fff' : 'none' }}>
+                  <img src={tileIcon} />
+              </button>
+              <button
+                onClick={() => setRepoView(false)}
+                style={{ border: repoView ? 'none' : '1px solid #fff' }}>
+                <img src={listIcon} />
+              </button>
+            </div>
+          </div>
+          {repositories.length > 0 ? 
+            (repoView ? 
+              <div>{
+                repositories.map(repo => {
+                  return (
+                    <div key={repo.name} onClick={() => window.location = repo.url}>
+                      <div>
+                        <img src={githubIcon} />
+                        <div>{repo.name}</div>
+                        <div>{repo.description}</div>
+                      </div>
+                      <div>
+                        <div>{repo.primaryLanguage}</div>
+                        <div>{repo.createdAt}</div>
+                      </div>
+                    </div>
+                  );
+                })
+              }</div> 
+              :
+              <table cellSpacing='0'>
+                <thead>
+                  <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Language</th>
+                    <th>Created</th>
                   </tr>
-                );
-              })
-            }</tbody>
-          </table> : 
-          <span>
-            Fetching data from GitHub, This may take a while...
-          </span>
-        }
+                </thead>
+                <tbody>{
+                  repositories.map(repo => {
+                    return (
+                      <tr key={repo.name} onClick={() => window.location = repo.url}>
+                        <td>{repo.name}</td>
+                        <td>{repo.description}</td>
+                        <td>{repo.primaryLanguage}</td>
+                        <td>{repo.createdAt}</td>
+                      </tr>
+                    );
+                  })
+                }</tbody>
+              </table> 
+            ): 
+            <span>
+              Fetching data from GitHub, This may take a while...
+            </span>
+          }
+        </section>
       </section>
       <footer>
         © Nicholas Sebastian Hendrata 2020<br/>
-        Website by Nicholas Sebastian, All rights reserved.
+        Designed and built by Nicholas Sebastian, All rights reserved.
       </footer>
       <div id="backdrop">
         <img src={shape1} />
@@ -226,7 +266,7 @@ export const indexQuery = graphql`
           projects {
             name
             description
-            tech
+            tags
             link
             repository
             image

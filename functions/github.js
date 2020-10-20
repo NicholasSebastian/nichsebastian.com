@@ -52,9 +52,9 @@ async function getRepos() {
         } = edge.node;
 
         return {
-            name,
+            name: name.replace(/-/g, ' '),
             description,
-            createdAt: createdAt.substr(0, 10),
+            createdAt: createdAt.substr(0, 10).replace(/-/g, '/'),
             primaryLanguage: primaryLanguage && primaryLanguage.name,
             url
         };

@@ -7,11 +7,13 @@ const Resume = ({ data }) => {
     } = data.file.childMarkdownRemark.frontmatter;
     return (
         <>
-            <h1>Resume Page</h1>
+            <h2>Resume Page</h2>
             <div>{name}</div>
         </>
     );
 }
+
+// Try scraping/API from linkedin instead.
 
 export default Resume;
 
