@@ -95,6 +95,12 @@ p {
     opacity: 1;
 }
 
+#backToTop {
+    position: fixed;
+    bottom: 2rem;
+    right: 2.5rem;
+}
+
 #hero {
     text-align: center;
     margin-top: 12rem;

@@ -56,13 +56,18 @@ skill:
     - Full Stack Web Development;
     - Front-end Web Development with HTML, CSS, JavaScript, jQuery, and React.js.
     - Back-end Web Development with Node.js and Express.
+    - Databases with MySQL and MongoDB.
     - iOS and Android Development with React Native.
     - Game Development with C# and Unity or MonoGame.
+    - Understanding of basic UI/UX design.
+    - Adept in the use of Microsoft Office and Google Suite applications.
 
 tools:
     - Visual Studio Code
     - Eclipse IDE
     - Visual Studio
+    - Shell Terminal
+    - MySQL Workbench
     - Adobe Photoshop
     - iMovie
     - Adobe XD / Figma

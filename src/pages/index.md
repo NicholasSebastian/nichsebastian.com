@@ -40,11 +40,13 @@ skills:
         - OpenGL / GLFW (Still learning)
     Others:
         - Git
-        - Unix
+        - Unix (Bash/Zsh)
     Tools:
         - Visual Studio Code
         - Eclipse
         - Visual Studio
+        - Shell Terminal
+        - MySQL Workbench
         - Adobe Photoshop
         - iMovie
         - Adobe XD / Figma
