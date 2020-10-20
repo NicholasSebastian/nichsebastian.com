@@ -13,11 +13,11 @@ const Post = ({ data }) => {
         <>
             <SEO title={frontmatter.title} 
             description={frontmatter.description} />
-            <article>
-            <h1>{frontmatter.title}</h1>
-            <div><span>{frontmatter.date}</span></div>
-            <div><span>{timeToRead}</span></div>
-            <div dangerouslySetInnerHTML={{ __html: html}} />
+            <article id="post">
+                <h3>{frontmatter.title}</h3>
+                <div>{frontmatter.date.replace(/-/g, '/')}</div>
+                <div>{`Time to Read: ${timeToRead} min(s)`}</div>
+                <div dangerouslySetInnerHTML={{ __html: html}} />
             </article>
         </>
     );

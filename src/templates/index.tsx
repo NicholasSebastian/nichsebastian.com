@@ -3,7 +3,6 @@ import { graphql, Link } from "gatsby";
 import Img from "gatsby-image";
 
 import SEO from "../components/seo";
-import TypeEffect from "../components/typeEffect";
 
 import githubIcon from "../images/github.svg";
 import linkedinIcon from "../images/linkedin.svg";
@@ -18,15 +17,14 @@ import shape3 from "../images/square-dashed.svg";
 import shape4 from "../images/triangle-filled.svg";
 import shape5 from "../images/triangle-hollow.svg";
 
-// TODO: Bottom-right Nav.
-// TODO: Add Fade-in effect / Lazy Loading.
-// TODO: Resume Template.
-// TODO: Contact Page.
+// TODO: RESPONSIVE WEBSITE.
 // TODO: Blog List Page.
 // TODO: Blog Post Template.
+// TODO: Fix Netlify Forms integration.
 // TODO: Fix Netlify CMS integration.
 // TODO: Add site manifest with Gatsby Plugin Manifest.
 // TODO: 404 Page.
+// TODO: Make repositories and blog-lists load in chunks.
 
 function fetchGithub() {
   const [repositories, setRepositories] = useState([]);
@@ -36,6 +34,20 @@ function fetchGithub() {
     .then(data => setRepositories(data))
   }, []);
   return repositories;
+}
+
+const TypeEffect = ({ text }) => {
+  const [typingText, setTypingText] = useState<string>('');
+  useEffect(() => {
+      if (typingText.length < text.length)
+          setTimeout(() => 
+              setTypingText(text.substr(0, typingText.length + 1)), 
+              100);
+  }, [typingText]);
+
+  return (
+      <div>{`${typingText}_`}</div>
+  );
 }
 
 const Home = ({ data }) => {
