@@ -19,13 +19,9 @@ import shape4 from "../images/triangle-filled.svg";
 import shape5 from "../images/triangle-hollow.svg";
 
 // TODO: RESPONSIVE WEBSITE.
-// TODO: Blog List Page.
-// TODO: Blog Post Template.
 // TODO: Fix Netlify Forms integration.
 // TODO: Fix Netlify CMS integration.
-// TODO: Add site manifest with Gatsby Plugin Manifest.
-// TODO: 404 Page.
-// TODO: Make repositories and blog-lists load in chunks. Look up pagination in Gatsby.
+// TODO: Add Pagination for Repos and Blog Posts.
 
 function fetchGithub() {
   const [repositories, setRepositories] = useState([]);

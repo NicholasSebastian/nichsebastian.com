@@ -20,13 +20,27 @@ const Blog = ({ data }) => {
             <h3>Occasional postings about my experiences and the things I've learned.</h3>
             {edges.map(({ node }) => {
               const post = node.childMarkdownRemark;
+              const dateString = new Date(post.frontmatter.date);
+              const year = dateString.toLocaleString('en-GB', { year: 'numeric' });
+              const month = dateString.toLocaleString('en-GB', { month: 'long' });
+              const date = dateString.toLocaleString('en-GB', { day: 'numeric' });
+              const day = dateString.toLocaleString('en-GB', { weekday: 'long' });
               return (
                 <Link to={node.name}>
                   <div>
-                    <div>{post.frontmatter.title}</div>
-                    <div>{post.frontmatter.description}</div>
-                    <div>{post.frontmatter.date.replace(/-/g, '/')}</div>
-                    <div>{post.timeToRead} min read</div>
+                    <div>
+                      <div>
+                        <div>{month}</div>
+                        <div>{date}</div>
+                        <div>{year}</div>
+                      </div>
+                      <div>{day}</div>
+                    </div>
+                    <div>
+                      <div>{post.frontmatter.title}</div>
+                      <div>{post.frontmatter.description}</div>
+                      <div>{post.timeToRead} min read</div>
+                    </div>
                   </div>
                 </Link>
               );
@@ -51,7 +65,11 @@ export const blogQuery = graphql`
         relativeDirectory: {
           eq: "blog"
         }
-      }
+      },
+        sort: {
+          fields: childMarkdownRemark___frontmatter___date,
+          order: DESC
+        }
     ) {
       edges {
         node {

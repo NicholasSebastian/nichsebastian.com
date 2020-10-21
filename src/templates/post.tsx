@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 
 import SEO from "../components/seo";
 import Footer from "../components/footer";
@@ -15,10 +15,22 @@ const Post = ({ data }) => {
         <>
             <SEO title={frontmatter.title} 
             description={frontmatter.description} />
+            <div id="post-nav">
+                <Link to="/">Home</Link>
+                <Link to="/blog">All Posts</Link>
+            </div>
             <article id="post">
                 <h3>{frontmatter.title}</h3>
-                <div>{frontmatter.date.replace(/-/g, '/')}</div>
-                <div>{`Time to Read: ${timeToRead} min(s)`}</div>
+                <div>Posted on {
+                    (new Date(frontmatter.date))
+                    .toLocaleDateString('en-GB', {
+                        weekday: 'long',
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    })
+                }</div>
+                <div>{timeToRead} min read</div>
                 <div dangerouslySetInnerHTML={{ __html: html}} />
             </article>
             <Footer/>

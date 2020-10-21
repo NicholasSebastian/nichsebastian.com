@@ -792,7 +792,9 @@ p {
 #blog-list > div > section > a > div {
     border-radius: 0.3rem;
     padding: 1.5rem 2rem;
+    height: 8rem;
     margin-bottom: 1rem;
+    display: flex;
     transition: 0.2s;
 }
 
@@ -800,31 +802,81 @@ p {
     background-color: #fff;
 }
 
-#blog-list > div > section > a > div:hover > div {
+#blog-list > div > section > a > div:hover > div > div {
     color: #000;
 }
 
-#blog-list > div > section > a > div > div:nth-child(1) {
-    font-size: 1.3rem;
-    font-weight: 700;
+#blog-list > div > section > a > div > div:first-child {
+    margin-right: 2rem;
+    border: 1px solid #fff;
+    width: 5.5rem;
+    height: 7.5rem;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
 }
 
-#blog-list > div > section > a > div > div:nth-child(2) {
+#blog-list > div > section > a > div > div:first-child > div:first-child {
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+#blog-list > div > section > a > div > div:first-child > div:first-child > div {
+    font-size: 0.8rem;
+}
+
+#blog-list > div > section > a > div > div:first-child > div:first-child > div:nth-child(2) {
+    font-size: 1.5rem;
+}
+
+#blog-list > div > section > a > div:hover > div:first-child > div:first-child > div {
+    color: #000;
+}
+
+#blog-list > div > section > a > div > div:first-child > div:last-child {
+    border-top: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+#blog-list > div > section > a > div > div:last-child > div:nth-child(1) {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+}
+
+#blog-list > div > section > a > div > div:last-child > div:nth-child(2) {
     margin: 1rem 0;
 }
 
-#blog-list > div > section > a > div > div:nth-child(3) {
-    display: inline-block;
-    margin-right: 2rem;
+#post-nav {
+    padding-top: 1.5rem;
+    padding-left: 2rem;
 }
 
-#blog-list > div > section > a > div > div:nth-child(4) {
+#post-nav > a {
     display: inline-block;
+    background-color: #000;
+    border: 1px solid #fff;
+    border-radius: 0.3rem;
+    padding: 1rem 0;
+    width: 6.5rem;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 700;
+    margin-right: 1rem;
+    transition: 0.2s;
+}
+
+#post-nav > a:hover {
+    background-color: #fff;
+    color: #000;
 }
 
 #post {
     padding-top: 2rem;
-    padding-bottom: 5rem;
+    padding-bottom: 8rem;
 }
 
 #post > h3 {
@@ -833,12 +885,7 @@ p {
 }
 
 #post > div:nth-child(2) {
-    display: inline-block;
-    margin-right: 3rem;
-}
-
-#post > div:nth-child(3) {
-    display: inline-block;
+    margin-bottom: 0.5rem;
 }
 
 #post > div:last-child {
@@ -850,11 +897,11 @@ p {
     -webkit-text-stroke: 0;
     color: #fff;
     font-size: 2rem;
-    margin-top: 3rem;
+    margin-top: 4rem;
 }
 
 #post > div:last-child > h3 {
-    margin-top: 2.5rem;
+    margin-top: 3.5rem;
 }
 
 #post > div:last-child > p {
@@ -869,4 +916,37 @@ p {
 
 #post > div:last-child > pre > code {
     font-family: 'Courier New', Courier, monospace;
+}
+
+#e404 {
+    text-align: center;
+    margin-top: 8rem;
+}
+
+#e404 > h2 {
+    margin-bottom: 0;
+}
+
+#e404 > h1 {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+}
+
+#e404 > h3 {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+#e404 > a {
+    text-decoration: none;
+    font-weight: 700;
+    border: 1px solid #fff;
+    border-radius: 0.3rem;
+    padding: 1.2rem 2rem;
+    transition: 0.2s;
+}
+
+#e404 > a:hover {
+    background-color: #fff;
+    color: #000;
 }
