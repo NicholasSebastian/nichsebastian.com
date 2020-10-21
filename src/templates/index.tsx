@@ -19,6 +19,10 @@ import shape4 from "../images/triangle-filled.svg";
 import shape5 from "../images/triangle-hollow.svg";
 
 // TODO: RESPONSIVE WEBSITE.
+//        - Projects Section.
+//        - Repositories Section.
+//        - Resume Page.
+//        - NavBars.
 // TODO: Fix Netlify Forms integration.
 // TODO: Fix Netlify CMS integration.
 // TODO: Add Pagination for Repos and Blog Posts.

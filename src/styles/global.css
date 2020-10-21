@@ -35,8 +35,8 @@ footer {
 
 h1, h2 {
     font-family: 'Rubik Mono One', sans-serif;
-    -webkit-text-stroke: 1px #fff;
-    color: #000;
+    -webkit-text-stroke: 1px #eee;
+    color: #111;
     line-height: 0.9;
 }
 
@@ -83,14 +83,14 @@ p {
 }
 
 #navbar > div:last-child > a:last-child {
-    border: 1px solid #fff;
+    border: 1px solid #eee;
     border-radius: 0.2rem;
     padding: 1rem 2rem;
 }
 
 #navbar > div:last-child > a:last-child:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: #eee;
+    color: #111;
     opacity: 1;
 }
 
@@ -120,7 +120,7 @@ p {
     content: '';
     width: 6rem;
     height: 0.5rem;
-    background-color: #fff;
+    background-color: #eee;
     position: absolute;
     top: -2rem;
     margin: 0 auto;
@@ -146,7 +146,7 @@ p {
 #about > div:first-child > div {
     max-width: var(--image-size);
     max-height: var(--image-size);
-    border: 1px solid #fff;
+    border: 1px solid #eee;
 }
 
 #about > div:first-child {
@@ -158,7 +158,7 @@ p {
     content: '';
     width: var(--image-size);
     height: var(--image-size);
-    border: 2px solid #fff;
+    border: 2px solid #eee;
     position: absolute;
     top: 2rem;
     left: 2rem;
@@ -177,7 +177,7 @@ p {
     display: inline-block;
     text-decoration: none;
     font-weight: 700;
-    border: 1px solid #fff;
+    border: 1px solid #eee;
     border-radius: 0.2rem;
     padding: 1rem 2rem;
     margin-top: 1rem;
@@ -185,8 +185,8 @@ p {
 }
 
 #about > div:last-child > a:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: #eee;
+    color: #111;
 }
 
 #skills {
@@ -214,13 +214,13 @@ p {
 #skills > div > div > div > span {
     font-size: 1.2rem;
     font-weight: 700;
-    background-color: #000;
+    background-color: #111;
     padding-right: 1rem;
 }
 
 #skills > div > div > div::after {
     content: '';
-    background-color: #fff;
+    background-color: #eee;
     width: 100%;
     height: 1px;
     position: absolute;
@@ -265,7 +265,7 @@ p {
 #projects > div > div:first-child > div:first-child > span {
     font-size: 1.4rem;
     font-weight: 700;
-    background-color: #000;
+    background-color: #111;
     padding-right: 1rem;
 }
 
@@ -273,7 +273,7 @@ p {
     content: '';
     width: 100%;
     height: 1px;
-    background-color: #fff;
+    background-color: #eee;
     position: absolute;
     top: 0.8rem;
     right: 0;
@@ -287,8 +287,8 @@ p {
 }
 
 #projects > div > div:first-child > div:last-child > div:nth-child(1) {
-    background-color: #000;
-    border: 1px solid #fff;
+    background-color: #111;
+    border: 1px solid #eee;
     letter-spacing: 0.07rem;
     width: 30rem;
     padding: 1rem;
@@ -311,7 +311,7 @@ p {
     display: inline-block;
     text-decoration: none;
     font-weight: 700;
-    border: 1px solid #fff;
+    border: 1px solid #eee;
     border-radius: 0.2rem;
     padding: 1rem 0;
     width: 7rem;
@@ -322,8 +322,8 @@ p {
 
 #projects > div > div:first-child > div:last-child > a:hover {
     cursor: pointer;
-    background-color: #fff;
-    color: #000;
+    background-color: #eee;
+    color: #111;
 }
 
 #projects > div > div:last-child {
@@ -333,7 +333,7 @@ p {
 
 #projects > div > div:last-child > div {
     max-width: 100%;
-    border: 1px solid #fff;
+    border: 1px solid #eee;
     transform: translateX(-1.5rem);
 }
 
@@ -341,7 +341,7 @@ p {
     content: '';
     width: 100%;
     height: 100%;
-    border: 2px dashed #fff;
+    border: 2px dashed #eee;
     position: absolute;
     top: 1.2rem;
     z-index: -1;
@@ -357,7 +357,7 @@ p {
 
 #projects > section > div:first-child::after {
     content: '';
-    background-color: #fff;
+    background-color: #eee;
     width: 100%;
     height: 1px;
     position: absolute;
@@ -367,7 +367,7 @@ p {
 
 #projects > section > div:first-child > h3 {
     font-size: 1.8rem;
-    background-color: #000;
+    background-color: #111;
     padding-right: 1.1rem;
 }
 
@@ -379,7 +379,7 @@ p {
 }
 
 #projects > section > div:first-child > div > button {
-    background-color: #000;
+    background-color: #111;
     border: none;
     width: 2.5rem;
     height: 2.5rem;
@@ -406,7 +406,7 @@ p {
 }
 
 #projects > section > div:last-child > div {
-    border: 1px solid #fff;
+    border: 1px solid #eee;
     border-radius: 0.3rem;
     height: 12rem;
     padding: 1.6rem;
@@ -418,7 +418,7 @@ p {
 
 #projects > section > div:last-child > div:hover {
     cursor: pointer;
-    background-color: #fff;
+    background-color: #eee;
 }
 
 #projects > section > div:last-child > div:hover > div > img {
@@ -426,7 +426,7 @@ p {
 }
 
 #projects > section > div:last-child > div:hover > div > div {
-    color: #000;
+    color: #111;
 }
 
 #projects > section > div:last-child > div > div:first-child > div:first-of-type {
@@ -495,11 +495,11 @@ p {
 
 #projects > section > table > tbody > tr:hover {
     cursor: pointer;
-    background-color: #fff;
+    background-color: #eee;
 }
 
 #projects > section > table > tbody > tr:hover > td {
-    color: #000;
+    color: #111;
 }
 
 #projects > section > span:last-child {
@@ -565,8 +565,8 @@ p {
 }
 
 #resume-nav > a {
-    background-color: #000;
-    border: 1px solid #fff;
+    background-color: #111;
+    border: 1px solid #eee;
     border-radius: 0.2rem;
     padding: 1rem 2rem;
     text-decoration: none;
@@ -577,8 +577,8 @@ p {
 
 #resume-nav > a:hover {
     cursor: pointer;
-    background-color: #fff;
-    color: #000;
+    background-color: #eee;
+    color: #111;
 }
 
 #resume-nav > div > button {
@@ -685,7 +685,7 @@ p {
     width: 100%;
     box-sizing: border-box;
     padding: 0.5rem;
-    color: #000;
+    color: #111;
     font-size: 1.05rem;
 }
 
@@ -694,7 +694,7 @@ p {
     width: 100%;
     box-sizing: border-box;
     padding: 0.5rem;
-    color: #000;
+    color: #111;
     font-size: 1.05rem;
 }
 
@@ -704,8 +704,8 @@ p {
 }
 
 #contact > form > div:last-child button {
-    background-color: #000;
-    border: 1px solid #fff;
+    background-color: #111;
+    border: 1px solid #eee;
     border-radius: 0.3rem;
     padding: 0.8rem 0;
     width: 5.5rem;
@@ -716,8 +716,8 @@ p {
 
 #contact > form > div:last-child button:hover {
     cursor: pointer;
-    background-color: #fff;
-    color: #000;
+    background-color: #eee;
+    color: #111;
 }
 
 #contact > form > div:last-child button:focus {
@@ -743,15 +743,15 @@ p {
     text-decoration: none;
     font-size: 1rem;
     font-weight: 700;
-    border: 1px solid #fff;
+    border: 1px solid #eee;
     border-radius: 0.3rem;
     padding: 1rem 2rem;
     transition: 0.2s;
 }
 
 #blog-list > a:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: #eee;
+    color: #111;
 }
 
 #blog-list > div {
@@ -768,7 +768,7 @@ p {
 }
 
 #blog-list > div > section > h2 {
-    background-color: #000;
+    background-color: #111;
     font-size: 5rem;
     width: 19rem;
     padding: 0.5rem 1rem;
@@ -777,7 +777,7 @@ p {
 }
 
 #blog-list > div > section > h3 {
-    background-color: #000;
+    background-color: #111;
     font-weight: 400;
     width: 37rem;
     padding: 0.5rem 1rem;
@@ -799,16 +799,16 @@ p {
 }
 
 #blog-list > div > section > a > div:hover {
-    background-color: #fff;
+    background-color: #eee;
 }
 
 #blog-list > div > section > a > div:hover > div > div {
-    color: #000;
+    color: #111;
 }
 
 #blog-list > div > section > a > div > div:first-child {
     margin-right: 2rem;
-    border: 1px solid #fff;
+    border: 1px solid #eee;
     width: 5.5rem;
     height: 7.5rem;
     display: grid;
@@ -829,11 +829,11 @@ p {
 }
 
 #blog-list > div > section > a > div:hover > div:first-child > div:first-child > div {
-    color: #000;
+    color: #111;
 }
 
 #blog-list > div > section > a > div > div:first-child > div:last-child {
-    border-top: 1px solid #fff;
+    border-top: 1px solid #eee;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -857,8 +857,8 @@ p {
 
 #post-nav > a {
     display: inline-block;
-    background-color: #000;
-    border: 1px solid #fff;
+    background-color: #111;
+    border: 1px solid #eee;
     border-radius: 0.3rem;
     padding: 1rem 0;
     width: 6.5rem;
@@ -870,8 +870,8 @@ p {
 }
 
 #post-nav > a:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: #eee;
+    color: #111;
 }
 
 #post {
@@ -895,7 +895,7 @@ p {
 #post > div:last-child > h2 {
     font-family: 'Signika Negative', sans-serif;
     -webkit-text-stroke: 0;
-    color: #fff;
+    color: #eee;
     font-size: 2rem;
     margin-top: 4rem;
 }
@@ -909,7 +909,7 @@ p {
 }
 
 #post > div:last-child > pre {
-    border: 1px solid #fff;
+    border: 1px solid #eee;
     background-color: #333;
     padding: 1rem;
 }
@@ -940,13 +940,128 @@ p {
 #e404 > a {
     text-decoration: none;
     font-weight: 700;
-    border: 1px solid #fff;
+    border: 1px solid #eee;
     border-radius: 0.3rem;
     padding: 1.2rem 2rem;
     transition: 0.2s;
 }
 
 #e404 > a:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: #eee;
+    color: #111;
+}
+
+@media only screen and (max-width: 768px) {
+    section, article {
+        width: 20rem;
+        overflow: hidden;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    #navbar {
+        width: 100vw;
+        margin-top: 2.5rem;
+    }
+
+    #navbar > div:first-child {
+        display: none;
+    }
+
+    #navbar > div:last-child {
+        text-align: end;
+    }
+
+    #backToTop {
+        display: none;
+    }
+
+    #about {
+        display: block;
+        margin: 6rem auto;
+    }
+
+    #about > div:first-child {
+        display: none;
+    }
+
+    #about > div:last-child {
+        margin-top: 5rem;
+    }
+
+    #skills {
+        margin: 8rem auto;
+    }
+
+    #projects {
+        margin: 8rem auto;
+    }
+
+    #projects > h2 {
+        font-size: 2rem;
+    }
+
+    #projects > div {
+        display: block;
+    }
+
+    #backdrop {
+        display: none;
+    }
+
+    #resume, #resume-id {
+        padding: 1rem 2rem;
+    }
+
+    #blog-list > div:first-child {
+        display: none;
+    }
+
+    #blog-list > div:last-child > section {
+        padding-top: 5rem;
+    }
+
+    #blog-list > div:last-child > section > h2 {
+        font-size: 3rem;
+        padding-left: 0;
+        margin-bottom: 1rem;
+    }
+
+    #blog-list > div:last-child > section > h3 {
+        display: none;
+    }
+
+    #blog-list > div:last-child > section > a > div {
+        display: block;
+        height: auto;
+        padding-left: 1rem;
+        margin-bottom: 0;
+    }
+
+    #blog-list > div:last-child > section > a > div > div:first-child {
+        display: none;
+    }
+
+    #post > h3 {
+        font-size: 2rem;
+    }
+
+    #post > div:last-child > h2 {
+        font-size: 1.7rem;
+        line-height: 2rem;
+    }
+
+    #post > div:last-child > p {
+        font-size: 0.95rem;
+    }
+
+    #post > div:last-child > pre {
+        overflow: scroll;
+    }
 }
