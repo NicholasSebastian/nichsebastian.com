@@ -1,6 +1,8 @@
 import React from "react";
 import { graphql } from "gatsby";
+
 import SEO from "../components/seo";
+import Footer from "../components/footer";
 
 const Post = ({ data }) => {
     const {
@@ -19,6 +21,7 @@ const Post = ({ data }) => {
                 <div>{`Time to Read: ${timeToRead} min(s)`}</div>
                 <div dangerouslySetInnerHTML={{ __html: html}} />
             </article>
+            <Footer/>
         </>
     );
 }

@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "gatsby";
+
 import SEO from "../components/seo";
+import Footer from "../components/footer";
 
 const Contact = () => {
   return (
@@ -51,6 +53,7 @@ const Contact = () => {
           </div>
         </form>
       </section>
+      <Footer />
     </>
   );
 }

@@ -113,7 +113,7 @@ kemampuan:
     - Pemahaman dasar pengeditan photo dengan Adobe Photohop.
     - Pemahaman dasar pengeditan video dengan iMovie.
     - Mampu penggunaan aplikasi-splikasi Microsoft Office dan Google Suite.
-    - Mampu bahasa Inggris (Aktif) dab bahasa Indonesia (Pasif).
+    - Mampu bahasa Inggris (Aktif) dan bahasa Indonesia (Pasif).
 
 prestasi: [
     {

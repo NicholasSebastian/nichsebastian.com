@@ -11,11 +11,11 @@
 
 * {
     font-family: 'Signika Negative', sans-serif;
-    color: #fff;
+    color: #eee;
 }
 
 body {
-    background-color: #000;
+    background-color: #111;
     margin: 0;
     padding: 0;
     max-width: 100%;
@@ -28,7 +28,6 @@ section, article {
 }
 
 footer {
-    margin-top: 10rem;
     margin-bottom: 2rem;
     padding-left: 2rem;
     font-size: 0.9rem;
@@ -239,6 +238,7 @@ p {
 
 #projects {
     margin-top: 15rem;
+    margin-bottom: 8rem;
 }
 
 #projects > h2 {
@@ -724,46 +724,149 @@ p {
     outline: none;
 }
 
-#blog-list > a {
-    text-decoration: none;
+#contact + footer {
+    margin-top: 6rem;
 }
 
-#blog-list > a > div {
+#blog-list {
+    position: relative;
+}
+
+#blog-list > div:first-child {
+    filter: grayscale() brightness(25%) contrast(60%);
+}
+
+#blog-list > a {
+    position: absolute;
+    top: 1.5rem;
+    left: 2rem;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
     border: 1px solid #fff;
     border-radius: 0.3rem;
-    padding: 1.5rem 2rem;
+    padding: 1rem 2rem;
     transition: 0.2s;
 }
 
-#blog-list > a > div:hover {
+#blog-list > a:hover {
     background-color: #fff;
-}
-
-#blog-list > a > div:hover > div {
     color: #000;
 }
 
-#blog-list > a > div > div:nth-child(1) {
+#blog-list > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+#blog-list > div > section {
+    padding-top: 12.5rem;
+    padding-bottom: 7rem;
+}
+
+#blog-list > div > section > h2 {
+    background-color: #000;
+    font-size: 5rem;
+    width: 19rem;
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+#blog-list > div > section > h3 {
+    background-color: #000;
+    font-weight: 400;
+    width: 37rem;
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+    margin-bottom: 7rem;
+}
+
+#blog-list > div > section > a {
+    text-decoration: none;
+}
+
+#blog-list > div > section > a > div {
+    border-radius: 0.3rem;
+    padding: 1.5rem 2rem;
+    margin-bottom: 1rem;
+    transition: 0.2s;
+}
+
+#blog-list > div > section > a > div:hover {
+    background-color: #fff;
+}
+
+#blog-list > div > section > a > div:hover > div {
+    color: #000;
+}
+
+#blog-list > div > section > a > div > div:nth-child(1) {
     font-size: 1.3rem;
     font-weight: 700;
 }
 
-#blog-list > a > div > div:nth-child(2) {
+#blog-list > div > section > a > div > div:nth-child(2) {
     margin: 1rem 0;
+}
+
+#blog-list > div > section > a > div > div:nth-child(3) {
+    display: inline-block;
+    margin-right: 2rem;
+}
+
+#blog-list > div > section > a > div > div:nth-child(4) {
+    display: inline-block;
+}
+
+#post {
+    padding-top: 2rem;
+    padding-bottom: 5rem;
 }
 
 #post > h3 {
     font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 #post > div:nth-child(2) {
-
+    display: inline-block;
+    margin-right: 3rem;
 }
 
 #post > div:nth-child(3) {
-    
+    display: inline-block;
 }
 
 #post > div:last-child {
-    
+    padding-top: 4rem;
+}
+
+#post > div:last-child > h2 {
+    font-family: 'Signika Negative', sans-serif;
+    -webkit-text-stroke: 0;
+    color: #fff;
+    font-size: 2rem;
+    margin-top: 3rem;
+}
+
+#post > div:last-child > h3 {
+    margin-top: 2.5rem;
+}
+
+#post > div:last-child > p {
+    font-size: 1.05rem;
+}
+
+#post > div:last-child > pre {
+    border: 1px solid #fff;
+    background-color: #333;
+    padding: 1rem;
+}
+
+#post > div:last-child > pre > code {
+    font-family: 'Courier New', Courier, monospace;
 }

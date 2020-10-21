@@ -1,6 +1,6 @@
 ---
-title: "My new website"
-description: "An insight to this new website of mine and what it's all about."
+title: "This new website of mine"
+description: "An insight to this new website, what it's all about, and what I used to actually make the site."
 date: "2020-10-16"
 ---
 

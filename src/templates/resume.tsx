@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { graphql, Link } from "gatsby";
 import Img from "gatsby-image";
+
 import SEO from "../components/seo";
+import Footer from "../components/footer";
 
 const Resume = ({ data }) => {
     const [lang, setLang] = useState<boolean>(true);
@@ -203,6 +205,7 @@ const Resume = ({ data }) => {
                 })}
             </article>
             }
+            <Footer />
         </>
     );
 }

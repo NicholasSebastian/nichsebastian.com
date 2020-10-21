@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby";
 import Img from "gatsby-image";
 
 import SEO from "../components/seo";
+import Footer from "../components/footer";
 
 import githubIcon from "../images/github.svg";
 import linkedinIcon from "../images/linkedin.svg";
@@ -24,7 +25,7 @@ import shape5 from "../images/triangle-hollow.svg";
 // TODO: Fix Netlify CMS integration.
 // TODO: Add site manifest with Gatsby Plugin Manifest.
 // TODO: 404 Page.
-// TODO: Make repositories and blog-lists load in chunks.
+// TODO: Make repositories and blog-lists load in chunks. Look up pagination in Gatsby.
 
 function fetchGithub() {
   const [repositories, setRepositories] = useState([]);
@@ -234,10 +235,7 @@ const Home = ({ data }) => {
           }
         </section>
       </section>
-      <footer>
-        © Nicholas Sebastian Hendrata 2020<br/>
-        Designed and built by Nicholas Sebastian, All rights reserved.
-      </footer>
+      <Footer />
       <div id="backdrop">
         <img src={shape1} />
         <img src={shape2} />
