@@ -18,11 +18,6 @@ import shape3 from "../images/square-dashed.svg";
 import shape4 from "../images/triangle-filled.svg";
 import shape5 from "../images/triangle-hollow.svg";
 
-// TODO: RESPONSIVE WEBSITE.
-//        - Projects Section.
-//        - Repositories Section.
-//        - Resume Page.
-//        - NavBars.
 // TODO: Fix Netlify Forms integration.
 // TODO: Fix Netlify CMS integration.
 // TODO: Add Pagination for Repos and Blog Posts.
@@ -62,7 +57,7 @@ const Home = ({ data }) => {
 
   const projectImages = {};
   data.projectImages.edges.forEach(edge => {
-    projectImages[edge.node.base] = edge.node.childImageSharp.fixed;
+    projectImages[edge.node.base] = edge.node.childImageSharp.fluid;
   })
 
   return (
@@ -165,7 +160,7 @@ const Home = ({ data }) => {
                 </div>
               </div>
               <div>
-                <Img fixed={projectImages[project.image]} />
+                <Img fluid={projectImages[project.image]} />
               </div>
             </div>
           );
@@ -303,8 +298,8 @@ export const indexQuery = graphql`
           node {
             base
             childImageSharp {
-              fixed(width: 576) {
-                ...GatsbyImageSharpFixed
+              fluid(maxWidth: 576) {
+                ...GatsbyImageSharpFluid
               }
             }
           }

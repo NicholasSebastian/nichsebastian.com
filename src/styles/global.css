@@ -953,7 +953,7 @@ p {
 
 @media only screen and (max-width: 768px) {
     section, article {
-        width: 20rem;
+        width: 90vw;
         overflow: hidden;
     }
     
@@ -963,6 +963,10 @@ p {
 
     h2 {
         font-size: 2rem;
+    }
+
+    footer {
+        font-size: 0.7rem;
     }
 
     #navbar {
@@ -978,8 +982,17 @@ p {
         text-align: end;
     }
 
+    #navbar > div:last-child > a:last-child {
+        border: none;
+        padding: 0;
+    }
+
     #backToTop {
         display: none;
+    }
+
+    #hero {
+        margin-top: 10rem;
     }
 
     #about {
@@ -995,8 +1008,21 @@ p {
         margin-top: 5rem;
     }
 
+    #about > div:last-child > p {
+        font-size: 0.95rem;
+    }
+
     #skills {
         margin: 8rem auto;
+    }
+
+    #skills > div > div {
+        width: 100%;
+    }
+
+    #skills ul {
+        padding-left: 1.5rem;
+        font-size: 0.95rem;
     }
 
     #projects {
@@ -1011,12 +1037,106 @@ p {
         display: block;
     }
 
+    #projects > div > div:first-child {
+        width: 100%;
+    }
+
+    #projects > div > div:first-child > div:last-child {
+        position: static;
+    }
+
+    #projects > div > div:first-child > div:last-child > div:first-child {
+        width: auto;
+        padding: 0;
+        border: none;
+        font-size: 0.95rem;
+    }
+
+    #projects > div > div:last-child {
+        width: auto;
+        margin-top: 2rem;
+    }
+
+    #projects > div > div:last-child::before {
+        display: none;
+    }
+
+    #projects > div > div:last-child > div {
+        transform: none;
+    }
+
+    #projects > section > div:first-child > div {
+        display: none;
+    }
+
+    #projects > section > div:last-child {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    #projects > section > div:last-child > div {
+        padding: 0.5rem 1rem 0.7rem 1rem;
+        overflow: hidden;
+        height: auto;
+    }
+
+    #projects > section > div:last-child > div > div:first-child > img {
+        display: none;
+    }
+
+    #projects > section > div:last-child > div > div:first-child > div:first-of-type {
+        font-size: 1rem;
+    }
+
+    #projects > section > div:last-child > div > div:last-child {
+        margin-top: 0.7rem;
+    }
+
+    #projects > section > div:last-child > div > div > div {
+        font-size: 0.9rem;
+    }
+
     #backdrop {
         display: none;
     }
 
+    #resume-nav > a {
+        padding: 0.4rem 0.8rem;
+    }
+
     #resume, #resume-id {
-        padding: 1rem 2rem;
+        width: auto;
+        padding: 0.5rem 1.5rem 3rem 1.5rem;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+
+    #resume > .col2, #resume-id > .col2 {
+        display: block;
+    }
+
+    #resume div, #resume ul, #resume-id div, #resume-id ul {
+        font-size: 0.8rem;
+    }
+
+    #resume > div:not(.col2) > div:first-child, #resume > .col2 > div > div > div:first-child {
+        font-size: 1.1rem;
+    }
+
+    #resume-id table > tbody > tr > td:first-child {
+        display: none;
+    }
+
+    #resume-id table {
+        border-spacing: 0;
+    }
+
+    #resume-id > div:first-child > div:first-child > table > tbody > tr > td:last-child {
+        padding: 0;
+    }
+
+    #blog-list > a {
+        padding: 0.4rem 0.8rem;
     }
 
     #blog-list > div:first-child {
@@ -1046,6 +1166,19 @@ p {
 
     #blog-list > div:last-child > section > a > div > div:first-child {
         display: none;
+    }
+
+    #blog-list > div:last-child > section > a > div > div:last-child > div:first-child {
+        font-size: 1.2rem;
+    }
+
+    #blog-list > div:last-child > section > a > div > div:last-child > div:not(:first-child) {
+        font-size: 0.95rem;
+    }
+
+    #post-nav > a {
+        padding: 0.4rem;
+        width: 5rem;
     }
 
     #post > h3 {
