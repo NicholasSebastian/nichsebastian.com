@@ -2,7 +2,7 @@
   Nicholas Sebastian Hendrata
 </h1>
 
-You can access the temporary domain [here](https://nichsebastian.netlify.app/)
+You can access the website [here](https://nichsebastian.com/)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/50e0269a-0c67-435e-b3d2-0f516a33062d/deploy-status)](https://app.netlify.com/sites/nichsebastian/deploys)
 

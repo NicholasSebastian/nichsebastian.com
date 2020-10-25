@@ -108,8 +108,12 @@ const Home = ({ data }) => {
             <ul>{skills.Languages.map(item => {
               return <li key={item}>{item}</li>
             })}</ul>
-            <div><span>Web Development</span></div>
-            <ul>{skills.Web_Development.map(item => {
+            <div><span>Front End Development</span></div>
+            <ul>{skills.Front_End_Development.map(item => {
+              return <li key={item}>{item}</li>
+            })}</ul>
+            <div><span>Back End Development</span></div>
+            <ul>{skills.Back_End_Development.map(item => {
               return <li key={item}>{item}</li>
             })}</ul>
           </div>
@@ -122,22 +126,26 @@ const Home = ({ data }) => {
             <ul>{skills.Game_Development.map(item => {
               return <li key={item}>{item}</li>
             })}</ul>
-            <div><span>Conceptual Knowledge</span></div>
-            <ul>{skills.Conceptual_Knowledge.map(item => {
+            <div><span>Desktop Development</span></div>
+            <ul>{skills.Desktop_Development.map(item => {
+              return <li key={item}>{item}</li>
+            })}</ul>
+            <div><span>Currently Learning</span></div>
+            <ul>{skills.Currently_Learning.map(item => {
               return <li key={item}>{item}</li>
             })}</ul>
           </div>
           <div>
-            <div><span>Others</span></div>
-            <ul>{skills.Others.map(item => {
-              return <li key={item}>{item}</li>
-            })}</ul>
             <div><span>Tools</span></div>
             <ul>{skills.Tools.map(item => {
               return <li key={item}>{item}</li>
             })}</ul>
             <div><span>Soft Skills</span></div>
             <ul>{skills.Soft_Skills.map(item => {
+              return <li key={item}>{item}</li>
+            })}</ul>
+            <div><span>Conceptual Knowledge</span></div>
+            <ul>{skills.Conceptual_Knowledge.map(item => {
               return <li key={item}>{item}</li>
             })}</ul>
           </div>
@@ -261,13 +269,15 @@ export const indexQuery = graphql`
           about
           skills {
             Languages
-            Web_Development
+            Front_End_Development
+            Back_End_Development
             Mobile_Development
+            Desktop_Development
             Game_Development
-            Others
             Tools
             Conceptual_Knowledge
             Soft_Skills
+            Currently_Learning
           }
           projects {
             name

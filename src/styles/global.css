@@ -908,6 +908,16 @@ p {
     font-size: 1.05rem;
 }
 
+#post > div:last-child > ul {
+    padding-left: 1.2rem;
+}
+
+#post > div:last-child > ul > li {
+    margin: 1rem 0;
+    font-size: 1.05rem;
+    letter-spacing: 0.07rem;
+}
+
 #post > div:last-child > pre {
     border: 1px solid #eee;
     background-color: #333;
@@ -985,6 +995,12 @@ p {
     #navbar > div:last-child > a:last-child {
         border: none;
         padding: 0;
+    }
+
+    #navbar > div:last-child > a:last-child:hover {
+        background: none;
+        color: #eee;
+        opacity: 0.5;
     }
 
     #backToTop {

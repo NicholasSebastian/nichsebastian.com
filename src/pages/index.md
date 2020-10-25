@@ -11,57 +11,60 @@ about:
 
 skills:
     Languages:
-        - JavaScript ES6+
+        - JavaScript
+        - TypeScript
         - C#
         - Java
         - Python
-        - Modern C++
-    Web Development:
-        - TypeScript
-        - HTML
-        - CSS
+    Front End Development:
+        - HTML / CSS
         - jQuery
         - React
+    Back End Development:
         - Node.js
         - Express
+        - ASP.NET
+        - GraphQL
         - MySQL
         - MongoDB
-        - GraphQL
-        - nginx (Still learning)
     Mobile Development:
         - React Native
         - Ionic / Cordova
+        - Xamarin
+    Desktop Development:
+        - Electron.js
+        - AWT & Swing
     Game Development:
+        - Unity Engine
         - MonoGame
         - LibGDX
-        - Unity Engine
-        - Pygame
-        - Phaser 3 (Still learning)
-        - OpenGL / GLFW (Still learning)
-    Others:
-        - Git
-        - Unix (Bash/Zsh)
     Tools:
+        - Git
+        - Unix Shell (Bash/Zsh)
         - Visual Studio Code
         - Eclipse
         - Visual Studio
         - Shell Terminal
         - MySQL Workbench
         - Adobe Photoshop
-        - iMovie
         - Adobe XD / Figma
         - Google Suite / MS Office
         - Blender
     Conceptual Knowledge:
-        - Object-Oriented Programming
+        - UI/UX Basics
         - Profiling
         - Debugging
-        - Search Engine Optimization (Still learning)
     Soft Skills:
         - Passionate / Hard Worker
         - Curious
         - Self-learner / Love to learn
         - Team player
+    Currently Learning:
+        - C++
+        - OpenGL / GLFW
+        - nginx
+        - Search Engine Optimization (SEO)
+        - Design Patterns
 
 projects: [
     {
