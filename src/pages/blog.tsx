@@ -18,7 +18,13 @@ const Blog = ({ data }) => {
           <section>
             <h2>Blog</h2>
             <h3>Occasional postings about my experiences and the things I've learned.</h3>
-            {edges.map(({ node }) => {
+            {edges
+            .sort((a, b): number => {   // GraphQL's sort not working so this is a fix.
+              const first = new Date(a.node.childMarkdownRemark.frontmatter.date);
+              const second = new Date(b.node.childMarkdownRemark.frontmatter.date);
+              return second.valueOf() - first.valueOf();
+            })
+            .map(({ node }) => {
               const post = node.childMarkdownRemark;
               const dateString = new Date(post.frontmatter.date);
               const year = dateString.toLocaleString('en-GB', { year: 'numeric' });
@@ -26,7 +32,7 @@ const Blog = ({ data }) => {
               const date = dateString.toLocaleString('en-GB', { day: 'numeric' });
               const day = dateString.toLocaleString('en-GB', { weekday: 'long' });
               return (
-                <Link to={node.name}>
+                <Link to={node.name} key={post.frontmatter.title} >
                   <div>
                     <div>
                       <div>

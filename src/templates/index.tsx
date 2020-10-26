@@ -18,6 +18,7 @@ import shape3 from "../images/square-dashed.svg";
 import shape4 from "../images/triangle-filled.svg";
 import shape5 from "../images/triangle-hollow.svg";
 
+// TODO: Blog post images.
 // TODO: Fix Netlify Forms integration.
 // TODO: Fix Netlify CMS integration.
 // TODO: Add Pagination for Repos and Blog Posts.
@@ -130,8 +131,8 @@ const Home = ({ data }) => {
             <ul>{skills.Desktop_Development.map(item => {
               return <li key={item}>{item}</li>
             })}</ul>
-            <div><span>Currently Learning</span></div>
-            <ul>{skills.Currently_Learning.map(item => {
+            <div><span>Conceptual Knowledge</span></div>
+            <ul>{skills.Conceptual_Knowledge.map(item => {
               return <li key={item}>{item}</li>
             })}</ul>
           </div>
@@ -144,8 +145,8 @@ const Home = ({ data }) => {
             <ul>{skills.Soft_Skills.map(item => {
               return <li key={item}>{item}</li>
             })}</ul>
-            <div><span>Conceptual Knowledge</span></div>
-            <ul>{skills.Conceptual_Knowledge.map(item => {
+            <div><span>Currently Learning</span></div>
+            <ul>{skills.Currently_Learning.map(item => {
               return <li key={item}>{item}</li>
             })}</ul>
           </div>

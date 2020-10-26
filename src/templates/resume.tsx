@@ -68,7 +68,7 @@ const Resume = ({ data }) => {
                 <h4>Education</h4>
                 {education.map(edu => {
                     return (
-                        <div>
+                        <div key={edu.inst}>
                             <div>{edu.inst}</div>
                             <div>{edu.cert}</div>
                             <div>{edu.year}</div>
@@ -81,7 +81,7 @@ const Resume = ({ data }) => {
                         <h4>Skills</h4>
                         <ul>{
                             skill.map(sk => {
-                                return <li>{sk}</li>
+                                return <li key={sk}>{sk}</li>
                             })
                         }</ul>
                     </div>
@@ -89,7 +89,7 @@ const Resume = ({ data }) => {
                         <h4>Tools</h4>
                         <ul>{
                             tools.map(tool => {
-                                return <li>{tool}</li>
+                                return <li key={tool}>{tool}</li>
                             })
                         }</ul>
                     </div>
@@ -99,7 +99,7 @@ const Resume = ({ data }) => {
                         <h4>Awards and Certifications</h4>
                         {certifications.map(cert => {
                             return (
-                                <div>
+                                <div key={cert.name}>
                                     <div>{cert.name}</div>
                                     <div>{cert.org}</div>
                                     <div>{cert.year}</div>
@@ -112,7 +112,7 @@ const Resume = ({ data }) => {
                         <h4>Experience</h4>
                         {experience.map(exp => {
                             return (
-                                <div>
+                                <div key={exp.org}>
                                     <div>{exp.org}</div>
                                     <div>{exp.role}</div>
                                     <div>{exp.year}</div>
@@ -178,7 +178,7 @@ const Resume = ({ data }) => {
                 <h4>Pendidikan Formal</h4>
                 {edukasi.map(edu => {
                     return (
-                        <div>
+                        <div key={edu.inst}>
                             <div>{edu.inst}</div>
                             <div>{edu.cert}</div>
                             <div>{edu.year}</div>
@@ -188,14 +188,14 @@ const Resume = ({ data }) => {
                 })}
                 <h4>Keterampilan</h4>
                 <ul>{
-                    kemampuan.map(skill => {
-                        return <li>{skill}</li>;
+                    kemampuan.map(sk => {
+                        return <li key={sk}>{sk}</li>;
                     })
                 }</ul>
                 <h4>Prestasi</h4>
                 {prestasi.map(cert => {
                     return (
-                        <div>
+                        <div key={cert.name}>
                             <div>{cert.name}</div>
                             <div>{cert.org}</div>
                             <div>{cert.year}</div>

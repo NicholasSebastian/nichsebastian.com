@@ -236,6 +236,33 @@ p {
     letter-spacing: 0.07rem;
 }
 
+#skills > div > div:last-child > div:last-of-type {
+    border-top: 1px solid #eee;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    padding-top: 1.5rem;
+    padding-left: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+#skills > div > div:last-child > div:last-of-type::after {
+    display: none;
+}
+
+#skills > div > div:last-child > div:last-of-type > span {
+    font-size: 1.1rem;
+}
+
+#skills > div > div:last-child > ul:last-of-type {
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding-left: 2.75rem;
+    padding-bottom: 1.5rem;
+    margin-top: 0;
+    font-size: 0.9rem;
+}
+
 #projects {
     margin-top: 15rem;
     margin-bottom: 8rem;
@@ -534,14 +561,14 @@ p {
 
 #backdrop > img:nth-child(4) {
     animation: spin 12s linear infinite;
-    top: 135rem;
+    top: 140rem;
     left: 5rem;
     width: 15rem;
 }
 
 #backdrop > img:nth-child(5) {
     animation: reverse-spin 12s linear infinite;
-    top: 155rem;
+    top: 160rem;
     right: 5rem;
     width: 12rem;
 }
@@ -877,6 +904,7 @@ p {
 #post {
     padding-top: 2rem;
     padding-bottom: 8rem;
+    max-width: 60rem;
 }
 
 #post > h3 {
@@ -922,6 +950,7 @@ p {
     border: 1px solid #eee;
     background-color: #333;
     padding: 1rem;
+    overflow: hidden;
 }
 
 #post > div:last-child > pre > code {

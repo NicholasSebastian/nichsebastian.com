@@ -44,7 +44,6 @@ skills:
         - Visual Studio Code
         - Eclipse
         - Visual Studio
-        - Shell Terminal
         - MySQL Workbench
         - Adobe Photoshop
         - Adobe XD / Figma

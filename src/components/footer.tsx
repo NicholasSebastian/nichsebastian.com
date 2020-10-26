@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <footer>
             © Nicholas Sebastian Hendrata 2020<br/>
-            Designed and built by Nicholas Sebastian, All rights reserved.
+            Built by Nicholas Sebastian, All rights reserved.
         </footer>
     );
 }
